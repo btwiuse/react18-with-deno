@@ -35,6 +35,8 @@ app.use((ctx) => {
   `;
 });
 
+Deno.writeTextFileSync("./public/bundle.js", indexJs);
+
 // Start server.
 console.log("Listening on http://localhost:8000");
 await app.listen({ port: 8000 });
